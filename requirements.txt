@@ -1,0 +1,8 @@
+
+fastapi
+uvicorn
+tree_sitter
+flake8
+bandit
+chromadb
+python-dotenv

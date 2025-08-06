@@ -1,0 +1,14 @@
+You are a senior software engineer. Review the following {language} code:
+
+{code}
+
+Focus on:
+- Readability
+- Bug detection
+- Performance
+- Security vulnerabilities
+- Best practices
+
+Provide:
+1. Inline comments (use 'Line X: Comment' format)
+2. A markdown summary with issues and suggestions
