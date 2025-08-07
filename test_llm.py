@@ -1,16 +1,17 @@
-from review_engine.llm_review import review_code_with_llm
+from review_engine.parser import CodeParser
 
-sample_code = """
+code = '''
+import os
+
 def greet(name):
-    print("Hello " + name)
+    print("Hello", name)
 
-greet("Ritesh")
-"""
+def farewell():
+    print("Goodbye")
+'''
 
-result = review_code_with_llm("python", sample_code, debug=True)
+parser = CodeParser("python")
+structure = parser.parse_code(code)
 
-if result["success"]:
-    print("✅ AI Review:\n")
-    print(result["response"])
-else:
-    print("❌ Error:\n", result["error"])
+for item in structure:
+    print(item)
